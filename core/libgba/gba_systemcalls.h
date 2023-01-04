@@ -119,7 +119,7 @@ static inline u32 BiosCheckSum() {
 	\param Number
 	\param Divisor
 */
-EWRAM_CODE s32	Div(s32 Number, s32 Divisor);
+IWRAM_CODE s32	Div(s32 Number, s32 Divisor);
 /*! \fn s32 DivMod(s32 Number, s32 Divisor)
 	\param Number
 	\param Divisor
@@ -166,13 +166,13 @@ IWRAM_CODE u32	Abs(s32 Number, s32 Divisor);
 	\param dest
 	\param mode
 */
-EWRAM_CODE void CpuSet( const void *source, void *dest, u32 mode);
+IWRAM_CODE void CpuSet( const void *source, void *dest, u32 mode);
 /*! \fn CpuFastSet( const void *source, void *dest, u32 mode)
 	\param source
 	\param dest
 	\param mode
 */
-EWRAM_CODE void CpuFastSet( const void *source, void *dest, u32 mode);
+IWRAM_CODE void CpuFastSet( const void *source, void *dest, u32 mode);
 
 /*! \fn void IntrWait(u32 ReturnFlag, u32 IntFlag)
     \brief waits for an interrupt to occur.

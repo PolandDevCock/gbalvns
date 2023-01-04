@@ -18,15 +18,8 @@ EWRAM_CODE void GbfsInit(void)
 
 	char* pHeader = (char*)(((u32)&__rom_end__ + 0xff) & 0xffffff00);
 
-	if(_Strncmp(pHeader, "PinEightGBFS", sizeof("PinEightGBFS")-1) == 0)
-	{
 		Gbfs.pHeader = (ST_GBFS_HEADER*)pHeader;
 		Gbfs.pList   = (ST_GBFS_LIST*)(pHeader + Gbfs.pHeader->dirOff);
-	}
-	else
-	{
-		SystemError("[Err][GbfsInit] .gbfs File Not Found");
-	}
 }
 //---------------------------------------------------------------------------
 IWRAM_CODE void* GbfsGetPointer(char* fname)

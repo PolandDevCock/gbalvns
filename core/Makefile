@@ -70,7 +70,7 @@ $(TARGET_BIN): $(TARGET_ELF)
 	@$(PREFIX)objcopy -v -O binary $< $@
 	@gbafix $@ -t$(NAME) -c$(GAMECODE)
 	@echo \# padding $@
-	@dd if=/dev/zero bs=1 count=$$(expr 256 - $$(stat -f "%Dz" $@) % 256) >> $@
+	@dd if=/dev/zero bs=1 count=$$(expr 256 - $$(stat -c "%s" $@) % 256) >> $@
 
 $(TARGET_ELF): $(OBJDIR) $(OFILES) $(AFILES) Makefile
 	@echo \# Linking $@

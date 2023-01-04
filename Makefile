@@ -15,4 +15,3 @@ GAME = summer.gba
 $(GAME): core/core.gba asset/asset.gbfs
 	@echo \# linking $@
 	@cat $^ > $@
-
