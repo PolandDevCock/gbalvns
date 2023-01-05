@@ -18,9 +18,9 @@ const ST_ANIME_DB AnimeDb[ANIME_MAX_DB_CNT] = {
 };
 
 const ST_ANIME_TABLE AnimeTable[ANIME_MAX_TABLE_CNT] = {
-	{ "image",    (void*)AnimeExecImage    },		// 背景画像　表示
-	{ "image2",   (void*)AnimeExecImage2   },		// "雫"　　　表示（決め打ち）
-	{ "image3",   (void*)AnimeExecImage3   },		// 連番画像　表示
+	{ "image",    (void*)AnimeExecImage    },		// background image display
+	{ "image2",   (void*)AnimeExecImage2   },		// "shizuku"　image display
+	{ "image3",   (void*)AnimeExecImage3   },		// sequential image display
 	{ "update",   (void*)AnimeExecUpdate   },
 	{ "print",    (void*)AnimeExecPrint    },
 	{ "printcls", (void*)AnimeExecPrintCls },
